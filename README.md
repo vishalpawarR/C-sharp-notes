@@ -74,3 +74,51 @@ bool processedCustomer;
 
 - You can only use the var keyword if the variable is initialized.
 - It's important to understand that the var keyword is dependent on the value you use to initialize the variable. If you try to use the var keyword without initializing the variable, you'll receive an error when you attempt to compile your code.
+
+## Perform basic string formatting in C#
+
+### Character Escape Sequences ("\back slash") :
+
+- To handle that situation, use the \" escape sequence.
+
+```c#
+Console.WriteLine("Hello \"World\"!");
+```
+
+If you run the code above, you would see the following output.
+
+Output
+
+```c#
+Hello "World"!
+```
+
+- What if you need to use the backslash for other purposes, like to display a file path?
+
+```C#
+Console.WriteLine("c:\source\repos");
+```
+
+- Unfortunately, C# reserves the backslash for escape sequences, so if you run the code, the compiler will display the following error.
+
+Output
+
+```cs
+(1,22): error CS1009: Unrecognized escape sequence
+```
+
+- The problem is the sequence \s. The \r doesn't produce an error because it is a valid escape sequence for a carriage return. However, it's unlikely that you would want to use a carriage return in this context.
+
+- To solve the problem, you use the \\ to display a single backslash.
+
+```C#
+|Console.WriteLine("c:\\source\\repos");
+```
+
+- Escaping the back slash character produces the output you intended.
+
+Output
+
+```cs
+c:\source\repos
+```

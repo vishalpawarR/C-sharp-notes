@@ -122,3 +122,35 @@ Output
 ```cs
 c:\source\repos
 ```
+
+## Escape character in C# :
+
+- We can escape the special meaning of any character using `"\"`.
+
+## Verbatim String Literal `"@"`:
+
+- We can use this with any number of space and tabs without using any escape character in the String.
+
+## Unicode Escape Characters `"\u"` :
+
+- We use this to get the character using the unicode value `\u`
+  using this we can add four character code. and get the values.
+
+## Exercise - String Interpolation `"$"`:
+
+- We can do the string concat using
+
+```cs
+string firstName = "Bob";
+string greeting = "Hello";
+Console.WriteLine($"{greeting} {firstName}!");
+```
+
+## Combine verbatim literals and string interpolation. :
+
+- We can combine them and make use of them and they will be useful to work with
+
+```cs
+string projectName = "First-Project";
+Console.WriteLine($@"C:\Output\{projectName}\Data");
+```

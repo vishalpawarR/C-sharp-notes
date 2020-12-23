@@ -154,3 +154,29 @@ Console.WriteLine($"{greeting} {firstName}!");
 string projectName = "First-Project";
 Console.WriteLine($@"C:\Output\{projectName}\Data");
 ```
+
+## namespace :
+
+- This is used to manage the code and avoid the name collisions.
+
+## System.Random :
+
+```cs
+Random dice = new Random();
+int roll = dice.Next(1, 7);
+Console.WriteLine(roll);
+```
+
+## Stateful versus stateless methods :
+
+- In computing, state describes the condition of the execution environment at a specific moment in time. As your code executes line by line, values are stored in variables. At any moment during execution, the current state of the application is the collection of all values stored in memory.
+
+Some methods don't rely on the current state of the application to work properly. In other words, stateless methods are implemented so that they can work without referencing or changing any values already stored in memory. Stateless methods are also known as static methods.
+
+For example, the Console.WriteLine() method doesn't rely on any values stored in memory. It performs its function and finishes without impacting the state of the application in any way.
+
+Other methods, however, must have access to the state of the application to work properly. In other words, stateful methods are built in such a way that they rely on values stored in memory by previous lines of code that have already executed. Or they modify the state of the application by updating values or storing new values in memory. They're also known as instance methods.
+
+Stateful (instance) methods keep track of their state in fields, which are variables defined on the class. Each new instance of the class gets its own copy of those fields in which to store state.
+
+A single class can support both stateful and stateless methods. However, when you need to call stateful methods, you must first create an instance of the class so that the method can access state.

@@ -3,3 +3,8 @@
 inheritance
 search for virtual keyword
 learn what is nullable?
+
+
+
+Copy constructor
+static Constructor

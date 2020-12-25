@@ -180,3 +180,60 @@ Other methods, however, must have access to the state of the application to work
 Stateful (instance) methods keep track of their state in fields, which are variables defined on the class. Each new instance of the class gets its own copy of those fields in which to store state.
 
 A single class can support both stateful and stateless methods. However, when you need to call stateful methods, you must first create an instance of the class so that the method can access state.
+
+## Conversion of the data :
+
+- Use a helper method on the data type
+- Use a helper method on the variable
+- Use the Convert class' methods
+
+* `ToString()` - to convert values to the string.
+* `Parse()` - to convert from string to the `int` value.
+
+## Using Convert class :
+
+- `TryParse()` - this is a method from the `Convert` class
+- `ToInt32()` - this convert from string to the int.
+
+## Array :
+
+- `Sort()`
+- `Reverse()`
+- `Clear()`
+- `Resize()`
+- `ToCharArray()`
+- `Join()` -
+
+```cs
+string value = "abc123";
+char[] valueArray = value.ToCharArray();
+Array.Reverse(valueArray);
+// string result = new string(valueArray);
+string result = String.Join(",", valueArray);
+Console.WriteLine(result);
+```
+
+- `Split()`
+
+## String :
+
+Here are most important takeaways from this unit about string formatting:
+
+You can use composite formatting or string interpolation to format strings.
+With composite formatting, you use a string template containing one or more replacement tokens in the form {0}. You also supply a list of arguments that are matched with the replacement tokens based on their order. Composite formatting works when using string.Format() or Console.WriteLine().
+With string interpolation, you use a string template containing the variable names you want replaced surrounded by curly braces. Use the $ directive before the string template to indicate you want the string to be interpolated.
+Format currency using a :C specifier.
+Format numbers using a :N specifier. Control the precision (number of values after the decimal point) using a number after the :N like {myNumber:N3}.
+Formatting currency and numbers depends on the end user's culture, a five character code that includes the user's country and language (per the settings on their computer).
+
+Methods that either add blank spaces for formatting purposes (PadLeft(), PadRight())
+
+Methods that either compare two strings or facilitate comparison (Trim(), TrimStart(), TrimEnd(), GetHashcode(), the Length property)
+
+Methods that help you determine what's inside of a string, or even retrieve just a part of the string (Contains(), StartsWith(), EndsWith(), Substring())
+
+Methods that change the content of the string by replacing, inserting, or removing parts (Replace(), Insert(), Remove())
+
+Methods that turn a string into an array of strings or characters (Split(), ToCharArray())
+
+- `IndexOf()` and `Substring()` `IndexOfAny()`
